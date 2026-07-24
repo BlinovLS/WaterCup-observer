@@ -12,16 +12,16 @@ class JSONManager():
 
     def __init__(self, app):
         self.path_to_file = Path(app.user_data_dir) / 'water_cups_data.json'
-        # print(f'path_to_file: {self.path_to_file}')
+        print(f'path_to_file: {self.path_to_file}')
 
         if not self.path_to_file.exists():
-            with open(self.path_to_file, 'w', encoding='utf-8') as file:
-                print('Here1')
+            with open(self.path_to_file, 'w') as file:
+                # print('Here1')
                 self.data[date.today().isoformat()] = 0
-                json.dump(self.data, file, ensure_ascii=False, indent=4)
+                json.dump(self.data, file, indent=4)
         else:
-            print('Here2')
-            with open(self.path_to_file, 'r', encoding='utf-8') as file:
+            # print('Here2')
+            with open(self.path_to_file, 'r') as file:
                 self.data = json.load(file)
 
     def new_today_data(self, new_cups):
@@ -36,5 +36,5 @@ class JSONManager():
 
     def write(self, new_cups):
         self.new_today_data(new_cups)
-        with open(self.path_to_file, 'w', encoding='utf-8') as file:
-            json.dump(self.data, file, ensure_ascii=False, indent=4)
+        with open(self.path_to_file, 'w') as file:
+            json.dump(self.data, file, indent=4)

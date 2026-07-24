@@ -5,8 +5,8 @@ from kivy.lang.builder import Builder
 from kivy.properties import ObjectProperty
 from kivy.uix.screenmanager import ScreenManager
 
-from src.ui.mainscreen import MainScreen
-from src.file_manager.jsonmanager import JSONManager
+from ui.mainscreen import MainScreen
+from file_manager.jsonmanager import JSONManager
 
 class WaterCupObserverApp(App):
 
