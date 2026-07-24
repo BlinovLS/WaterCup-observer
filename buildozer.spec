@@ -12,7 +12,7 @@ title = WaterCup Observer
 package.name = watercupobserver
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = com.water-cup-application.slyfox
+package.domain = com.watercupapplication.slyfox
 
 # (str) Source code where the main.py live
 source.dir = ./src
