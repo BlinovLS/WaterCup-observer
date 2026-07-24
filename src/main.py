@@ -1,3 +1,5 @@
+# docker run --rm -it -v "${PWD}:/home/user/hostcwd" kivy/buildozer android debug
+
 import os.path
 
 from kivy.app import App
