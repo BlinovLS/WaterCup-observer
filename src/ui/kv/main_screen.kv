@@ -5,30 +5,32 @@
 
         BoxLayout:
             orientation: 'vertical'
-            size_hint_y: None
+            size_hint_y: 0.15
 
             Label:
                 text: 'Cups'
                 font_size:sp(32)
-                size_hit_y: None
-                height:self.texture_size[1] + dp(10)
+                # size_hit_y: None
+                # height:self.texture_size[1] + dp(10)
+
 
         BoxLayout:
             orientation: 'vertical'
+	    # size_hint_y: 0.30
 
             Label:
                 text: f'Today cups: {root.sum_cups}'
-                size_hint_y: None
+                # size_hint_y: None
                 font_size: sp(20)
 
             Label:
                 text: f'Add new cups: {root.add_cups}'
-                size_hint_y: None
+                # size_hint_y: None
                 font_size: sp(20)
 
 
         BoxLayout:
-            size_hint_y: None
+            size_hint_y: 0.20
             padding: dp(15)
             spacing: dp(10)
 
@@ -37,22 +39,22 @@
             Button:
                 text: '-'
                 font_size: sp(32)
-                height: self.texture_size[1] + dp(20)
+                # height: self.texture_size[1] + dp(20)
                 on_release: root.minus_on_release()
 
             Button:
                 text: '+'
                 font_size: sp(32)
-                height: self.texture_size[1] + dp(20)
+                # height: self.texture_size[1] + dp(20)
                 on_release: root.plus_on_release()
 
         BoxLayout:
             orientation: 'vertical'
-            size_hint_y: None
+            size_hint_y: 0.20
             padding: [dp(15), dp(0), dp(15), dp(15)]
 
             Button:
                 text: 'Confirm'
                 font_size: sp(22)
-                height: self.texture_size[1] + dp(20)
+                # height: self.texture_size[1] + dp(20)
                 on_release: root.confirm_on_release()
